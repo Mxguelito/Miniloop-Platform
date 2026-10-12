@@ -1,0 +1,28 @@
+.empty-state {
+  padding:
+    var(--space-xl)
+    var(--space-lg);
+
+  text-align: center;
+
+  background: var(--color-surface);
+
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.empty-state__title {
+  margin-bottom: var(--space-xs);
+
+  font-size: 1.25rem;
+}
+
+.empty-state__description {
+  max-width: 500px;
+
+  margin:
+    0 auto
+    var(--space-md);
+
+  color: var(--color-text-secondary);
+}

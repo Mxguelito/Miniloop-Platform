@@ -1,0 +1,718 @@
+/* =========================
+   MERCHANT ORDER DETAIL
+========================= */
+
+/* =========================
+   MUNDO / FONDO
+========================= */
+
+body {
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(67, 126, 255, 0.30),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #160b3d 0%,
+      #24105a 48%,
+      #10072d 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   VOLVER
+========================= */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 24px;
+
+  margin-bottom: 2rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  font-weight: 900;
+  text-decoration: none;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 rgba(10, 55, 145, 0.55),
+    0 12px 22px rgba(38, 126, 232, 0.22);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.back-link:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 rgba(10, 55, 145, 0.48),
+    0 17px 28px rgba(38, 126, 232, 0.28);
+}
+
+.back-link:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    0 3px 0 rgba(10, 55, 145, 0.55);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.merchant-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--space-xl);
+
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  color: #ffffff;
+}
+
+.merchant-detail-header__eyebrow {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: #a98cff;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.merchant-detail-header h1 {
+  margin: 0 0 0.6rem;
+
+  color: #ffffff;
+
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.merchant-detail-header p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.merchant-detail-label {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+
+/* =========================
+   BASE CARDS 3D
+========================= */
+
+.merchant-detail-customer,
+.merchant-detail-products,
+.merchant-detail-action,
+.merchant-detail-finished {
+  border: 3px solid rgba(125, 195, 255, 0.85);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #3188ed 45%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.30),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.12),
+    0 10px 0 rgba(8, 3, 35, 0.38),
+    0 20px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   CLIENTE
+========================= */
+
+.merchant-detail-customer {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 1.75rem 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.merchant-detail-customer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(255, 255, 255, 0.45);
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    0 6px 0 rgba(10, 55, 145, 0.45),
+    0 12px 20px rgba(0, 0, 0, 0.18);
+}
+
+.merchant-detail-customer__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+.merchant-detail-customer__content h2 {
+  margin: 0 0 0.3rem;
+
+  color: #ffffff;
+
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.merchant-detail-customer__content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-weight: 600;
+}
+
+.merchant-detail-customer__content p strong {
+  color: #ffffff;
+}
+
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.merchant-detail-products {
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.merchant-detail-products__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  margin-bottom: 1.75rem;
+}
+
+.merchant-detail-products__header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.merchant-detail-products__count {
+  padding: 0.65rem 1rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+
+  background: rgba(26, 96, 205, 0.75);
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.18),
+    0 4px 0 rgba(10, 55, 145, 0.35);
+}
+
+
+/* =========================
+   ITEMS
+========================= */
+
+.merchant-detail-items {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.merchant-detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  padding: 1.25rem 1.4rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 103, 220, 0.82),
+      rgba(19, 82, 185, 0.82)
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.10);
+}
+
+.merchant-detail-item:first-child {
+  padding-top: 1.25rem;
+}
+
+.merchant-detail-item__left {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-md);
+}
+
+.merchant-detail-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  font-size: 1.5rem;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.18);
+}
+
+.merchant-detail-item__name {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.merchant-detail-item__quantity {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.merchant-detail-item__subtotal {
+  white-space: nowrap;
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.merchant-detail-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  margin-top: 1.5rem;
+
+  padding: 1.4rem 1.5rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.20);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 103, 220, 0.85),
+      rgba(19, 82, 185, 0.85)
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.10);
+}
+
+.merchant-detail-total span {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.merchant-detail-total small {
+  display: block;
+
+  margin-top: 0.25rem;
+
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.merchant-detail-total > strong {
+  color: #ffffff;
+
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   PRÓXIMA ACCIÓN
+========================= */
+
+.merchant-detail-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-xl);
+
+  padding: 1.75rem 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.merchant-detail-action__content {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-lg);
+}
+
+.merchant-detail-action__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.20),
+    0 5px 0 rgba(10, 55, 145, 0.35);
+}
+
+.merchant-detail-action h2 {
+  margin: 0 0 0.3rem;
+
+  color: #ffffff;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.merchant-detail-action p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-weight: 600;
+}
+
+.merchant-detail-action__button {
+  width: 280px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   BOTÓN ACCIÓN
+========================= */
+
+.merchant-detail-action__button .ui-button {
+  min-height: 58px;
+
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 18px;
+
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.30),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 rgba(8, 3, 35, 0.35);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.merchant-detail-action__button .ui-button:hover {
+  transform: translateY(-3px);
+}
+
+.merchant-detail-action__button .ui-button:active {
+  transform: translateY(2px);
+}
+
+
+/* =========================
+   FINALIZADO / CANCELADO
+========================= */
+
+.merchant-detail-finished {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-md);
+
+  padding: 1.5rem 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.merchant-detail-finished__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.merchant-detail-finished strong {
+  display: block;
+
+  margin-bottom: 0.25rem;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.merchant-detail-finished p {
+  margin: 0;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   ENTREGADO
+========================= */
+
+.merchant-detail-finished--success {
+  border-color: rgba(151, 255, 205, 0.85);
+
+  background:
+    linear-gradient(
+      145deg,
+      #32c980,
+      #15945a
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.30),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 rgba(4, 88, 48, 0.55),
+    0 18px 30px rgba(0, 0, 0, 0.22);
+}
+
+.merchant-detail-finished--success
+.merchant-detail-finished__icon {
+  background: rgba(255, 255, 255, 0.90);
+
+  color: #078347;
+}
+
+.merchant-detail-finished--success strong,
+.merchant-detail-finished--success p {
+  color: #ffffff;
+}
+
+
+/* =========================
+   CANCELADO
+========================= */
+
+.merchant-detail-finished--cancelled {
+  border-color: rgba(255, 170, 170, 0.90);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff6868,
+      #d93636
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 rgba(130, 22, 22, 0.55),
+    0 18px 30px rgba(0, 0, 0, 0.22);
+}
+
+.merchant-detail-finished--cancelled
+.merchant-detail-finished__icon {
+  background: rgba(255, 255, 255, 0.90);
+
+  color: #d92d20;
+}
+
+.merchant-detail-finished--cancelled strong,
+.merchant-detail-finished--cancelled p {
+  color: #ffffff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .merchant-detail-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .merchant-detail-customer {
+    padding: 1.5rem;
+  }
+
+  .merchant-detail-products {
+    padding: 1.5rem;
+  }
+
+  .merchant-detail-action {
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 1.5rem;
+  }
+
+  .merchant-detail-action__button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  .merchant-detail-header {
+    flex-direction: column;
+  }
+
+  .merchant-detail-products__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .merchant-detail-item {
+    align-items: flex-start;
+  }
+
+  .merchant-detail-total > strong {
+    font-size: 1.6rem;
+  }
+
+  .merchant-detail-action__content {
+    align-items: flex-start;
+  }
+}

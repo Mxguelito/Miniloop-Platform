@@ -1,0 +1,885 @@
+/* =========================================================
+   ORDERS - BASE
+========================================================= */
+
+.orders-list {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+
+.order-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+}
+
+
+.order-card__number {
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+.order-card__business {
+  margin: 0.25rem 0 0;
+}
+
+
+.order-card__info {
+  display: flex;
+
+  gap: var(--space-xl);
+
+  margin: var(--space-lg) 0;
+}
+
+
+.order-card__info-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.35rem;
+}
+
+
+.order-card__info-item span {
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+}
+
+
+.order-card__link {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  color: var(--color-primary);
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+.order-card__link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   MY ORDERS PAGE
+========================================================= */
+
+.orders-page-header {
+  position: relative;
+
+  margin-top: var(--space-xl);
+  margin-bottom: 2.5rem;
+}
+
+
+.orders-page-count {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  padding: 0.7rem 1.1rem;
+
+  border-radius: 999px;
+
+  background: #efedff;
+  color: #5b47f5;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ORDERS SECTION
+========================================================= */
+
+.orders-section {
+  margin-top: var(--space-xl);
+}
+
+
+.orders-section__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  margin-bottom: 1.5rem;
+}
+
+
+.orders-section__eyebrow {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: #5b47f5;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+.orders-section__heading h2 {
+  margin: 0;
+
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   MIS PEDIDOS
+========================================================= */
+
+.customer-orders-header {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+
+  text-align: center;
+}
+
+
+.customer-orders-header__eyebrow {
+  display: block;
+
+  margin-bottom: var(--space-xs);
+
+  color: var(--color-primary);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.customer-orders-header__title {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+
+  line-height: 1.1;
+}
+
+
+.customer-orders-header__description {
+  max-width: 520px;
+
+  margin:
+    var(--space-sm)
+    auto
+    0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MIS PEDIDOS - RESUMEN
+========================================================= */
+
+.customer-orders-section {
+  margin-top: var(--space-xl);
+}
+
+
+.customer-orders-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  margin-bottom: var(--space-lg);
+}
+
+
+.customer-orders-summary h2 {
+  margin: 0 0 0.25rem;
+
+  font-size: 1.35rem;
+}
+
+
+.customer-orders-summary p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================================================
+   MIS PEDIDOS - CONTADOR
+========================================================= */
+
+.customer-orders-count {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-xs);
+
+  padding:
+    var(--space-sm)
+    var(--space-md);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+
+.customer-orders-count strong {
+  font-size: 1.15rem;
+}
+
+
+.customer-orders-count span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MIS PEDIDOS - LISTADO
+========================================================= */
+
+.orders-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    );
+
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   PEDIDOS DEL COMERCIO
+========================================================= */
+
+.merchant-orders-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   PEDIDO COMERCIO - CARD
+========================================================= */
+
+.merchant-order-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+}
+
+
+.merchant-order-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+}
+
+
+.merchant-order-card__customer {
+  margin: 0.35rem 0 0;
+
+  color: var(--color-text);
+
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+
+.merchant-order-card__subtitle {
+  margin: 0.25rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   PEDIDO COMERCIO - TOTAL / FECHA
+========================================================= */
+
+.merchant-order-card__info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-xl);
+
+  padding:
+    var(--space-lg)
+    0;
+
+  border-top:
+    1px solid
+    var(--color-border);
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+}
+
+
+.merchant-order-card__info-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+
+.merchant-order-card__info-item span {
+  color: var(--color-text-secondary);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+
+.merchant-order-card__info-item strong {
+  color: var(--color-text);
+
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   PEDIDO COMERCIO - ACCIONES
+========================================================= */
+
+.merchant-order-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-xl);
+}
+
+
+.merchant-order-card__detail {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  color: var(--color-primary);
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+.merchant-order-card__detail:hover {
+  text-decoration: underline;
+}
+
+
+.merchant-order-card__main-action {
+  width: min(325px, 100%);
+}
+
+
+/* =========================================================
+   PEDIDO COMERCIO - ESTADO FINAL
+========================================================= */
+
+.order-state-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 62px;
+
+  padding: 0.9rem 1.2rem;
+
+  border-radius: var(--radius-md);
+
+  text-align: center;
+
+  font-weight: 800;
+}
+
+
+.order-state-message--success {
+  background: #ecfdf3;
+  color: #00875a;
+}
+
+
+.order-state-message--cancelled {
+  background: #fff1f2;
+  color: #be123c;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .orders-page-count {
+    position: static;
+
+    display: inline-flex;
+
+    margin-top: 1rem;
+  }
+
+
+  .orders-section__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .orders-section__heading h2 {
+    font-size: 1.5rem;
+  }
+
+
+  .customer-orders-header {
+    margin-bottom: var(--space-xl);
+  }
+
+
+  .customer-orders-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .orders-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* PEDIDOS COMERCIO */
+
+  .merchant-order-card__header {
+    flex-direction: column;
+  }
+
+
+  .merchant-order-card__info {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-lg);
+  }
+
+
+  .merchant-order-card__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+
+  .merchant-order-card__main-action {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   MIS PEDIDOS - GAME STYLE
+========================================================= */
+
+.customer-orders-section .orders-list {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 26px;
+}
+
+
+/* CARD */
+
+.customer-orders-section .order-card {
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 26px 28px;
+
+  overflow: hidden;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f7f5ff 100%
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -5px 0 rgba(91, 71, 245, 0.08),
+    0 8px 0 rgba(10, 5, 48, 0.28),
+    0 16px 28px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* HOVER */
+
+.customer-orders-section .order-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -5px 0 rgba(91, 71, 245, 0.1),
+    0 12px 0 rgba(10, 5, 48, 0.25),
+    0 22px 34px rgba(0, 0, 0, 0.2);
+}
+
+
+/* HEADER */
+
+.customer-orders-section .order-card__header {
+  align-items: center;
+}
+
+
+/* NÚMERO PEDIDO */
+
+.customer-orders-section .order-card__number {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 38px;
+
+  padding: 0 15px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #7e9fe1,
+      #557bc8
+    );
+
+  color: #ffffff;
+
+  font-size: 0.88rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 4px 0 rgba(47, 74, 138, 0.25);
+}
+
+
+/* INFORMACIÓN */
+
+.customer-orders-section .order-card__info {
+  margin: 24px 0 18px;
+
+  padding: 18px 0;
+
+  border-top:
+    1px solid rgba(91, 71, 245, 0.1);
+
+  border-bottom:
+    1px solid rgba(91, 71, 245, 0.1);
+}
+
+
+/* LABELS */
+
+.customer-orders-section
+.order-card__info-item span {
+  color: #827b96;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* BOTÓN VER PEDIDO */
+
+.customer-orders-section .order-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 48px;
+
+  margin-top: auto;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #7259ff,
+      #5941e8 55%,
+      #4630c7
+    );
+
+  color: #ffffff;
+
+  font-size: 0.88rem;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 5px 0 #34249b;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.customer-orders-section .order-card__link:hover {
+  text-decoration: none;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 7px 0 #34249b;
+}
+
+
+.customer-orders-section .order-card__link:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 1px 0 #34249b;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .customer-orders-section .orders-list {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .customer-orders-section .order-card {
+    min-height: auto;
+
+    padding: 22px 20px;
+
+    border-radius: 20px;
+  }
+
+}
+
+/* =========================================================
+   MIS PEDIDOS - TEXTO VISIBLE
+========================================================= */
+
+/* Nombre del comercio */
+
+.customer-orders-section .order-card__business {
+  color: #21183f;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+
+/* Valores: total y fecha */
+
+.customer-orders-section
+.order-card__info-item strong {
+  color: #21183f;
+
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+
+/* Etiquetas TOTAL / FECHA */
+
+.customer-orders-section
+.order-card__info-item span {
+  color: #756d8b;
+}
+
+/* =========================================================
+   MIS PEDIDOS - HEADER SOBRE FONDO OSCURO
+========================================================= */
+
+.customer-orders-header__eyebrow {
+  color: #8d7cff;
+}
+
+.customer-orders-header__title {
+  color: #ffffff;
+
+  text-shadow:
+    0 4px 0 rgba(20, 10, 70, 0.18);
+}
+
+.customer-orders-header__description {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* =========================================================
+   MIS PEDIDOS - IDENTIDAD NARANJA
+========================================================= */
+
+.customer-orders-header__eyebrow {
+  color: #ffb52e;
+}
+
+
+/* CONTADOR */
+
+.customer-orders-count {
+  background:
+    linear-gradient(
+      145deg,
+      #ffbf45,
+      #ff950f
+    );
+
+  color: #ffffff;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.10),
+    0 5px 0 #c96100;
+}
+
+
+/* NÚMERO DEL PEDIDO */
+
+.customer-orders-section .order-card__number {
+  background:
+    linear-gradient(
+      145deg,
+      #ffb52e,
+      #f07a00
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.10),
+    0 4px 0 #bd5d00;
+}
+
+
+/* DETALLES INTERNOS */
+
+.customer-orders-section .order-card__info {
+  border-top:
+    1px solid rgba(240, 122, 0, 0.18);
+
+  border-bottom:
+    1px solid rgba(240, 122, 0, 0.18);
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.customer-orders-section .order-card__link {
+  background:
+    linear-gradient(
+      145deg,
+      #ffb52e,
+      #f28a00 55%,
+      #e56f00
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 5px 0 #b95700;
+}
+
+
+/* HOVER DEL BOTÓN */
+
+.customer-orders-section .order-card__link:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 7px 0 #b95700;
+}
+
+
+/* CLICK */
+
+.customer-orders-section .order-card__link:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 1px 0 #b95700;
+}

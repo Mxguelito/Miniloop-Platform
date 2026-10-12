@@ -1,0 +1,397 @@
+/* =========================
+   DELIVERY - ACTIVACIÓN
+========================= */
+
+.delivery-activate-card {
+  max-width: 680px;
+}
+
+.delivery-activate-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+
+/* =========================
+   FORM FIELD
+========================= */
+
+.delivery-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.delivery-form-field__label {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.delivery-form-field__select {
+  width: 100%;
+  min-height: var(--control-height);
+
+  padding:
+    0.75rem
+    1rem;
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  outline: none;
+
+  font: inherit;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.delivery-form-field__select:focus {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px
+    var(--color-primary-soft);
+}
+
+.delivery-form-field__select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.delivery-activate-actions {
+  margin-top: var(--space-sm);
+}
+
+/* =========================
+   DELIVERY - GENERAL
+========================= */
+
+.delivery-section {
+  margin-top: var(--space-xl);
+}
+
+.delivery-section__title {
+  margin: 0 0 var(--space-md);
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+/* =========================
+   PERFIL
+========================= */
+
+.delivery-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.delivery-profile-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.delivery-profile-card__header h2 {
+  margin: var(--space-xs) 0 0;
+  color: var(--color-text);
+}
+
+.delivery-eyebrow {
+  display: block;
+  margin-bottom: var(--space-xs);
+
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.delivery-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.delivery-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+
+  padding: var(--space-md);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.delivery-info-item span {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.delivery-info-item strong {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.delivery-profile-actions {
+  margin-top: var(--space-sm);
+}
+
+
+/* =========================
+   ESTADÍSTICAS
+========================= */
+
+.delivery-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.delivery-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.delivery-stat-card span {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.delivery-stat-card strong {
+  color: var(--color-text);
+  font-size: 1.6rem;
+}
+
+
+/* =========================
+   GANANCIAS
+========================= */
+
+.delivery-earnings-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.delivery-earning-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.delivery-earning-card div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.delivery-earning-card span {
+  color: var(--color-text-secondary);
+}
+
+.delivery-earning-card strong {
+  color: var(--color-text);
+  font-size: 1.15rem;
+}
+
+
+/* =========================
+   ENTREGAS DISPONIBLES
+========================= */
+
+.delivery-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.delivery-job-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.delivery-job-card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.delivery-job-card__info span {
+  color: var(--color-text-secondary);
+}
+
+.delivery-job-card__info strong {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+
+/* =========================
+   ENTREGA ACTIVA
+========================= */
+
+.delivery-active-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.delivery-active-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.delivery-active-card__header h2 {
+  margin: var(--space-xs) 0 0;
+  color: var(--color-text);
+}
+
+.delivery-active-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+
+/* =========================
+   CÓDIGOS
+========================= */
+
+.delivery-code-box {
+  padding: var(--space-lg);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  text-align: center;
+}
+
+.delivery-code-box span {
+  display: block;
+  color: var(--color-text-secondary);
+}
+
+.delivery-code-box strong {
+  display: block;
+
+  margin: var(--space-sm) 0;
+
+  color: var(--color-text);
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.delivery-code-box p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   ACCIONES SECUNDARIAS
+========================= */
+
+.delivery-secondary-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
+  padding-top: var(--space-lg);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.delivery-secondary-box h3 {
+  margin: 0;
+  color: var(--color-text);
+}
+
+
+/* =========================
+   INPUT / TEXTAREA
+========================= */
+
+.delivery-input,
+.delivery-textarea {
+  width: 100%;
+
+  padding: 0.75rem 1rem;
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  outline: none;
+
+  font: inherit;
+
+  box-sizing: border-box;
+}
+
+.delivery-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.delivery-input:focus,
+.delivery-textarea:focus {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px
+    var(--color-primary-soft);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .delivery-profile-grid,
+  .delivery-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-profile-card__header,
+  .delivery-active-card__header,
+  .delivery-earning-card,
+  .delivery-job-card__info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

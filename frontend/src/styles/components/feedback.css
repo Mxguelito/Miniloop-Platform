@@ -1,0 +1,23 @@
+/* =========================
+   FEEDBACK
+========================= */
+
+.success-message,
+.error-message {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+}
+
+.success-message {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.error-message {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}

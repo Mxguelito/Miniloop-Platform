@@ -1,0 +1,666 @@
+/* =========================
+   MERCHANT PRODUCTS
+========================= */
+
+.merchant-products {
+  margin-top: var(--space-xl);
+}
+
+
+/* =========================
+   BOTÓN AGREGAR PRODUCTO
+========================= */
+
+.merchant-products__add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 22px;
+
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #725cff 0%,
+      #593ff1 55%,
+      #4931d6 100%
+    );
+
+  color: #ffffff;
+
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.14),
+    0 6px 0 #2c1a9d,
+    0 12px 20px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.merchant-products__add-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 #2c1a9d,
+    0 16px 24px rgba(0, 0, 0, 0.25);
+}
+
+.merchant-products__add-button:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    0 2px 0 #2c1a9d,
+    0 6px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.merchant-products__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.merchant-products__heading h2 {
+  margin: 0 0 0.35rem;
+
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+.merchant-products__heading p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.merchant-products__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0, 1fr));
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.merchant-product-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 430px;
+
+  padding: 18px;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(255, 255, 255, 0.38);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.12),
+    0 8px 0 rgba(8, 3, 35, 0.35),
+    0 16px 26px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.merchant-product-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.12),
+    0 12px 0 rgba(8, 3, 35, 0.3),
+    0 24px 34px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.merchant-product-card__content {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-width: 0;
+}
+
+/* =========================
+   PARTE SUPERIOR + IMAGEN 3D
+========================= */
+
+.merchant-product-card__top {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 165px;
+
+  margin-bottom: 8px;
+}
+
+.merchant-product-card__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 165px;
+
+  padding-top: 20px;
+}
+
+.merchant-product-card__image {
+  display: block;
+
+  width: 215px;
+  height: 215px;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 14px 18px rgba(0, 0, 0, 0.28)
+    );
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.merchant-product-card:hover
+.merchant-product-card__image {
+  transform:
+    translateY(-5px)
+    scale(1.08);
+
+  filter:
+    drop-shadow(
+      0 19px 22px rgba(0, 0, 0, 0.32)
+    );
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.merchant-product-status {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  z-index: 5;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem 0.7rem;
+
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+.merchant-product-status--active {
+  background: #e8f7ef;
+  color: #087f4f;
+}
+
+.merchant-product-status--inactive {
+  background: #f1f1f4;
+  color: #686875;
+}
+
+
+/* =========================
+   PRODUCT TITLE
+========================= */
+
+.merchant-product-card h3 {
+  margin: 8px 0 18px;
+
+  color: #ffffff;
+
+  font-size: 1.35rem;
+  font-weight: 900;
+
+  line-height: 1.15;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   PRODUCT DATA
+========================= */
+
+.merchant-product-card__data {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+.merchant-product-card__data > div {
+  min-width: 0;
+
+  padding: 10px 12px;
+
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 13px;
+
+  background: rgba(20, 24, 110, 0.2);
+
+  text-align: left;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.merchant-product-card__data span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.merchant-product-card__data strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+
+  line-height: 1.1;
+  white-space: nowrap;
+}
+/* =========================
+   ACCIONES
+========================= */
+
+.merchant-product-card__actions {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
+
+  width: 100%;
+  gap: 8px;
+
+  margin-top: auto;
+}
+
+/* =========================
+   BOTONES CARD
+========================= */
+
+.merchant-product-button {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+
+  padding: 0.65rem 0.15rem;
+
+  border: 0;
+  border-radius: 13px;
+
+  font: inherit;
+  font-size: 0.66rem;
+  font-weight: 900;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease,
+    box-shadow 0.15s ease;
+}
+/* =========================
+   BOTONES CARD
+========================= */
+
+.merchant-product-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+.merchant-product-button:active {
+  transform: translateY(1px);
+}
+
+
+/* EDITAR */
+
+.merchant-product-button--secondary {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #e9e6ff
+    );
+
+  color: #5942ef;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    0 4px 0 rgba(48, 31, 140, 0.35);
+}
+
+
+/* DESACTIVAR */
+
+.merchant-product-button--danger {
+  background:
+    linear-gradient(
+      180deg,
+      #fff7f7,
+      #ffe5e5
+    );
+
+  color: #d92d2d;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    0 4px 0 rgba(150, 35, 35, 0.28);
+}
+
+
+/* PRIMARY */
+
+.merchant-product-button--primary {
+  background:
+    linear-gradient(
+      180deg,
+      #725cff,
+      #4931d6
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 4px 0 #2c1a9d;
+}
+
+
+/* =========================
+   CREATE FORM
+========================= */
+
+.merchant-product-form {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+
+  padding: 2rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 0 rgba(8, 3, 35, 0.25),
+    0 16px 28px rgba(0, 0, 0, 0.18);
+}
+
+.merchant-product-form__header {
+  margin-bottom: 1.5rem;
+}
+
+.merchant-product-form__header h2 {
+  margin: 0 0 0.35rem;
+}
+
+.merchant-product-form__header p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+}
+
+.merchant-product-form__fields,
+.merchant-product-edit__fields {
+  display: grid;
+
+  grid-template-columns:
+    2fr 1fr 1fr;
+
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.merchant-product-form label,
+.merchant-product-edit label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  font-weight: 600;
+}
+
+.merchant-product-form label span,
+.merchant-product-edit label span {
+  font-size: 0.9rem;
+}
+
+.merchant-product-form input,
+.merchant-product-edit input {
+  width: 100%;
+
+  padding: 0.9rem 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: var(--color-text);
+
+  font: inherit;
+
+  outline: none;
+  box-sizing: border-box;
+}
+
+.merchant-product-form input:focus,
+.merchant-product-edit input:focus {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px rgba(91, 70, 246, 0.1);
+}
+
+
+/* =========================
+   EDIT
+========================= */
+
+.merchant-product-edit {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.merchant-product-edit__header {
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.merchant-product-edit__header h3 {
+  margin: 0;
+}
+
+.merchant-product-edit__fields {
+  grid-template-columns: 1fr;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.merchant-products__error {
+  margin-top: var(--space-lg);
+
+  padding: 1rem 1.2rem;
+
+  border-radius: 14px;
+
+  background: #fff0f0;
+  color: #c92a2a;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   RESPONSIVE - 3 COLUMNAS
+========================= */
+
+@media (max-width: 1200px) {
+  .merchant-products__grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================
+   RESPONSIVE - 2 COLUMNAS
+========================= */
+
+@media (max-width: 900px) {
+  .merchant-products__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .merchant-products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .merchant-product-form__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .merchant-product-card__actions,
+  .merchant-product-edit__actions,
+  .merchant-product-form__actions {
+    flex-direction: column;
+  }
+
+  .merchant-products__heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .merchant-products__add-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   ACCIONES EDITAR PRODUCTO
+========================= */
+
+.merchant-product-edit__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.merchant-product-edit__actions .merchant-product-button {
+  width: 100%;
+  flex: none;
+}

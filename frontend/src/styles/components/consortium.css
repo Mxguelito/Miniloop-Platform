@@ -1,0 +1,4052 @@
+/* =========================
+   CONSORTIUM - CREATE
+========================= */
+
+.consortium-create-page {
+  width: 100%;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.consortium-form-card {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  padding: var(--space-xl);
+}
+
+.consortium-form-card__header {
+  margin-bottom: var(--space-lg);
+}
+
+.consortium-form-card__header h2 {
+  margin:
+    0
+    0
+    var(--space-xs);
+}
+
+.consortium-form-card__header p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.consortium-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+}
+
+.consortium-form__actions {
+  display: flex;
+
+  gap: var(--space-sm);
+}
+
+.consortium-form__actions .ui-button {
+  flex: 1;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-form-card {
+    padding: var(--space-lg);
+  }
+
+  .consortium-form__actions {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   CONSORTIUM PAGE
+========================= */
+
+.consortium-page {
+  width: 100%;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.consortium-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-lg);
+}
+
+
+/* =========================
+   CONSORTIUM CARD
+========================= */
+
+.consortium-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  min-height: 390px;
+  padding: 1.8rem;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(102, 201, 111, 0.22);
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 7px 0 rgba(36, 147, 59, 0.16),
+    0 16px 30px rgba(8, 3, 35, 0.16);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.consortium-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(102, 201, 111, 0.55);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 10px 0 rgba(36, 147, 59, 0.2),
+    0 22px 38px rgba(8, 3, 35, 0.2);
+}
+
+
+/* =========================
+   3D IMAGE
+========================= */
+
+.consortium-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 150px;
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(102, 201, 111, 0.18),
+      rgba(102, 201, 111, 0.05) 55%,
+      transparent 72%
+    );
+}
+
+.consortium-card__image {
+  display: block;
+
+  width: 155px;
+  height: 155px;
+
+  object-fit: contain;
+
+  transition: transform 0.2s ease;
+}
+
+.consortium-card:hover .consortium-card__image {
+  transform:
+    translateY(-4px)
+    scale(1.05);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.consortium-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0.65rem;
+}
+
+.consortium-card__content h3 {
+  margin: 0;
+
+  color: #17122f;
+
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.consortium-card__address {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   BUTTON - CONSORCIO GREEN
+========================= */
+
+.consortium-card .ui-button {
+  width: 100%;
+  min-height: 52px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      #66c96f,
+      #36ad4c 55%,
+      #24933b
+    );
+
+  color: #ffffff;
+
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 5px 0 #18772d;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-card .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 7px 0 #18772d;
+}
+
+.consortium-card .ui-button:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 2px 0 #18772d;
+}
+
+
+/* =========================
+   CREATE
+========================= */
+
+.consortium-create {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: var(--space-sm);
+
+  margin-top: var(--space-lg);
+}
+/* =========================
+   CONSORTIUM ACTIONS
+========================= */
+
+.consortium-create .ui-button {
+  min-height: 56px;
+  padding: 0 1.6rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+
+  font-weight: 900;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+/* UNIRME CON CÓDIGO */
+
+.consortium-create .ui-button--secondary {
+  background:
+    linear-gradient(
+      145deg,
+      #f5fff6,
+      #e3f8e7
+    );
+
+  color: #24933b;
+
+  border-color: rgba(102, 201, 111, 0.35);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 5px 0 rgba(36, 147, 59, 0.22);
+}
+
+
+/* CREAR CONSORCIO */
+
+.consortium-create .ui-button:not(.ui-button--secondary) {
+  background:
+    linear-gradient(
+      145deg,
+      #66c96f,
+      #36ad4c 55%,
+      #24933b
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 5px 0 #18772d;
+}
+
+
+/* HOVER */
+
+.consortium-create .ui-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* CLICK */
+
+.consortium-create .ui-button:active {
+  transform: translateY(3px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consortium-create .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   CONSORTIUM DETAIL
+========================= */
+
+.consortium-detail-page {
+  width: 100%;
+}
+
+
+/* =========================
+   DETAIL CARD
+========================= */
+
+.consortium-detail-card {
+  padding: var(--space-xl);
+}
+
+.consortium-detail-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: var(--space-xl);
+}
+
+.consortium-detail-card__label {
+  display: block;
+
+  margin-bottom: var(--space-xs);
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.consortium-detail-section {
+  padding-top: var(--space-lg);
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+.consortium-detail-section h2 {
+  margin:
+    0
+    0
+    var(--space-xs);
+}
+
+.consortium-detail-section p {
+  margin:
+    0
+    0
+    var(--space-lg);
+
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.consortium-detail-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-md);
+}
+
+.consortium-detail-actions .ui-button {
+  width: 100%;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-detail-card {
+    padding: var(--space-lg);
+  }
+
+  .consortium-detail-actions {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   CONSORTIUM INVITATIONS - GAME STYLE
+========================================================= */
+
+.consortium-invitations-page {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+
+/* =========================
+   CARD CREAR INVITACIÓN
+========================= */
+
+.consortium-invitation-create {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  padding: 32px 36px;
+
+  border: 2px solid rgba(102, 201, 111, 0.2);
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 7px 0 rgba(36, 147, 59, 0.15),
+    0 18px 32px rgba(4, 1, 25, 0.16);
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.consortium-invitation-create h2,
+.consortium-invitation-result h2 {
+  margin: 0 0 8px;
+
+  color: #21183f;
+
+  font-size: 1.55rem;
+  font-weight: 900;
+
+  letter-spacing: -0.03em;
+}
+
+.consortium-invitation-create p,
+.consortium-invitation-result p {
+  margin: 0;
+
+  color: #777187;
+
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   BOTÓN GENERAR
+========================= */
+
+.consortium-invitation-create .ui-button {
+  flex-shrink: 0;
+
+  min-height: 56px;
+
+  padding: 0 26px;
+
+  border: 2px solid #76d384;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #5dca69,
+      #36b64b 55%,
+      #28a43d
+    );
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 #167c2d;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-invitation-create .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 8px 0 #167c2d;
+}
+
+.consortium-invitation-create .ui-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #167c2d;
+}
+
+
+/* =========================================================
+   RESULTADO DE INVITACIÓN
+========================================================= */
+
+.consortium-invitation-result {
+  padding: 32px 36px;
+
+  border: 2px solid rgba(102, 201, 111, 0.2);
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 7px 0 rgba(36, 147, 59, 0.15),
+    0 18px 32px rgba(4, 1, 25, 0.16);
+}
+
+
+/* =========================
+   HEADER RESULTADO
+========================= */
+
+.consortium-invitation-result__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================
+   CÓDIGO
+========================= */
+
+.consortium-invitation-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding: 24px 28px;
+
+  border: 2px solid rgba(102, 201, 111, 0.28);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3fff5,
+      #e5f8e9
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 6px 0 rgba(36, 147, 59, 0.14);
+}
+
+.consortium-invitation-code span {
+  color: #24933b;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.consortium-invitation-code strong {
+  color: #21183f;
+
+  font-size: 2rem;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-invitation-create {
+    align-items: stretch;
+    flex-direction: column;
+
+    padding: 24px;
+  }
+
+  .consortium-invitation-create .ui-button {
+    width: 100%;
+  }
+
+  .consortium-invitation-result {
+    padding: 24px;
+  }
+
+  .consortium-invitation-result__header {
+    flex-direction: column;
+  }
+
+  .consortium-invitation-code {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .consortium-invitation-code strong {
+    font-size: 1.6rem;
+  }
+}
+/* =========================================================
+   CONSORTIUM MEMBERS - GAME STYLE
+========================================================= */
+/* =========================================================
+   CONSORTIUM MEMBERS - GAME STYLE
+========================================================= */
+
+.consortium-members-page {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+.consortium-members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+/* =========================
+   MEMBER CARD
+========================= */
+
+.consortium-member-card {
+  padding: 24px 28px;
+
+  border: 2px solid rgba(102, 201, 111, 0.18);
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f8fff9
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 7px 0 rgba(36, 147, 59, 0.14),
+    0 18px 32px rgba(8, 3, 35, 0.14);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.consortium-member-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(102, 201, 111, 0.42);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 9px 0 rgba(36, 147, 59, 0.17),
+    0 22px 38px rgba(8, 3, 35, 0.17);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.consortium-member-card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+/* =========================
+   MEMBER INFO
+========================= */
+
+.consortium-member-card__info {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  min-width: 0;
+}
+
+
+/* =========================
+   ROBOT
+========================= */
+
+.consortium-member-card__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 104px;
+  height: 104px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(102, 201, 111, 0.3);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3fff5,
+      #e5f9e9
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 6px 0 rgba(36, 147, 59, 0.15);
+}
+
+.consortium-member-card__avatar-image {
+  display: block;
+
+  width: 94%;
+  height: 94%;
+
+  object-fit: contain;
+
+  transition: transform 0.2s ease;
+}
+
+.consortium-member-card:hover
+.consortium-member-card__avatar-image {
+  transform: scale(1.07);
+}
+
+
+/* =========================
+   NAME + EMAIL
+========================= */
+
+.consortium-member-card__text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  min-width: 210px;
+}
+
+.consortium-member-card__text h3 {
+  margin: 0;
+
+  color: #21183f;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.consortium-member-card__text p {
+  margin: 0;
+
+  color: #777187;
+
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   UNIT AREA
+========================= */
+
+.consortium-member-card__unit {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 14px;
+
+  margin-left: auto;
+}
+
+.consortium-member-card__unit label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  color: #21183f;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.consortium-member-card__unit select {
+  width: 210px;
+  height: 54px;
+
+  padding: 0 16px;
+
+  border: 2px solid rgba(102, 201, 111, 0.32);
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f5fff6,
+      #e7f9ea
+    );
+
+  color: #21183f;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  cursor: pointer;
+  outline: none;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 5px 0 rgba(36, 147, 59, 0.15);
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-member-card__unit select:hover {
+  border-color: rgba(102, 201, 111, 0.65);
+}
+
+.consortium-member-card__unit select:focus {
+  border-color: #59c969;
+}
+
+
+/* =========================
+   ASSIGN BUTTON
+========================= */
+
+.consortium-member-card__unit .ui-button {
+  min-width: 130px;
+  height: 54px;
+
+  padding: 0 22px;
+
+  border: 2px solid #76d384;
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #5dca69,
+      #36b64b 55%,
+      #28a43d
+    );
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 #167c2d;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-member-card__unit .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 8px 0 #167c2d;
+}
+
+.consortium-member-card__unit .ui-button:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 2px 0 #167c2d;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-member-card {
+    padding: 20px;
+  }
+
+  .consortium-member-card__content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .consortium-member-card__info {
+    width: 100%;
+  }
+
+  .consortium-member-card__avatar {
+    width: 82px;
+    height: 82px;
+  }
+
+  .consortium-member-card__unit {
+    width: 100%;
+    margin-left: 0;
+
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .consortium-member-card__unit label {
+    width: 100%;
+  }
+
+  .consortium-member-card__unit select {
+    width: 100%;
+  }
+
+  .consortium-member-card__unit .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   CONSORTIUM COMMUNICATIONS - GAME STYLE
+========================================================= */
+
+.consortium-communications-page {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.consortium-communication-form-card {
+  position: relative;
+
+  margin-bottom: 3rem;
+  padding: 2.2rem;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(102, 201, 111, 0.2);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 8px 0 rgba(36, 147, 59, 0.15),
+    0 22px 40px rgba(4, 1, 25, 0.18);
+}
+
+
+/* =========================
+   FORM HEADER
+========================= */
+
+.consortium-communication-form-card__header {
+  margin-bottom: 1.8rem;
+}
+
+.consortium-communication-form-card__header h2 {
+  margin: 0 0 0.45rem;
+
+  color: #21183f;
+
+  font-size: 1.7rem;
+  font-weight: 900;
+
+  letter-spacing: -0.03em;
+}
+
+.consortium-communication-form-card__header p {
+  margin: 0;
+
+  color: #777187;
+
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.consortium-communication-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.4rem;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.consortium-communication-form .form-field input {
+  min-height: 58px;
+
+  padding: 0 18px;
+
+  border: 2px solid rgba(102, 201, 111, 0.22);
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-communication-form .form-field input:focus {
+  border-color: #59c969;
+
+  box-shadow:
+    0 0 0 4px rgba(89, 201, 105, 0.11);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.consortium-communication-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.consortium-communication-field label {
+  color: #21183f;
+
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.consortium-communication-field textarea {
+  width: 100%;
+  min-height: 145px;
+
+  box-sizing: border-box;
+
+  padding: 18px;
+
+  border: 2px solid rgba(102, 201, 111, 0.22);
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #21183f;
+
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.55;
+
+  resize: vertical;
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-communication-field textarea:focus {
+  border-color: #59c969;
+
+  box-shadow:
+    0 0 0 4px rgba(89, 201, 105, 0.11);
+}
+
+
+/* =========================
+   PUBLISH BUTTON
+========================= */
+
+.consortium-communication-form .ui-button {
+  align-self: flex-start;
+
+  min-height: 56px;
+
+  padding: 0 26px;
+
+  border: 2px solid #76d384;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #5dca69,
+      #36b64b 55%,
+      #28a43d
+    );
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 #167c2d;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-communication-form .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 8px 0 #167c2d;
+}
+
+.consortium-communication-form .ui-button:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 2px 0 #167c2d;
+}
+
+
+/* =========================================================
+   LATEST COMMUNICATIONS
+========================================================= */
+
+.consortium-communications-section {
+  margin-top: 3rem;
+}
+
+.consortium-communications-section > h2 {
+  margin: 0 0 1.5rem;
+
+  color: #ffffff;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+.consortium-communications-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   COMMUNICATION CARD
+========================= */
+
+.consortium-communication-card {
+  position: relative;
+
+  padding: 1.7rem 2rem 1.6rem;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(102, 201, 111, 0.18);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 6px 0 rgba(36, 147, 59, 0.14),
+    0 16px 28px rgba(4, 1, 25, 0.14);
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* BARRA VERDE LATERAL */
+
+.consortium-communication-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 18px;
+  bottom: 18px;
+  left: 0;
+
+  width: 6px;
+
+  border-radius: 0 999px 999px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #66c96f,
+      #24933b
+    );
+}
+
+
+.consortium-communication-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(102, 201, 111, 0.42);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 8px 0 rgba(36, 147, 59, 0.17),
+    0 20px 34px rgba(4, 1, 25, 0.17);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.consortium-communication-card h3 {
+  margin: 0 0 0.65rem;
+
+  color: #21183f;
+
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.consortium-communication-card p {
+  margin: 0 0 1.1rem;
+
+  color: #696376;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.consortium-communication-card__date {
+  display: inline-flex;
+
+  padding: 7px 11px;
+
+  border-radius: 10px;
+
+  background: #eaf8ed;
+
+  color: #24933b;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-communication-form-card {
+    padding: 1.5rem;
+
+    border-radius: 22px;
+  }
+
+  .consortium-communication-form .ui-button {
+    width: 100%;
+  }
+
+  .consortium-communication-card {
+    padding: 1.4rem 1.5rem;
+  }
+
+  .consortium-communications-section > h2 {
+    font-size: 1.55rem;
+  }
+}
+
+/* =========================================================
+   CONSORTIUM DETAIL - GAME STYLE
+========================================================= */
+
+.consortium-detail-page {
+  padding-bottom: 4rem;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.consortium-detail-page .page-header {
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.consortium-detail-page .page-header h1 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.consortium-detail-page .page-header p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.consortium-detail-card {
+  padding: 2.2rem;
+
+  border: 2px solid rgba(102, 201, 111, 0.22);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    0 8px 0 rgba(36, 147, 59, 0.16),
+    0 22px 40px rgba(4, 1, 25, 0.2);
+}
+
+
+/* =========================================================
+   STATUS HEADER
+========================================================= */
+
+.consortium-detail-card__header {
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgba(36, 147, 59, 0.14);
+}
+
+.consortium-detail-card__label {
+  display: block;
+
+  margin-bottom: 0.7rem;
+
+  color: #24933b;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.consortium-detail-section {
+  padding: 2rem 0;
+}
+
+.consortium-detail-section + .consortium-detail-section {
+  border-top: 1px solid rgba(36, 147, 59, 0.14);
+}
+
+.consortium-detail-section h2 {
+  margin: 0 0 0.4rem;
+
+  color: #21183f;
+
+  font-size: 1.65rem;
+  font-weight: 900;
+}
+
+.consortium-detail-section p {
+  margin: 0 0 1.5rem;
+
+  color: #777187;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTION GRID
+========================================================= */
+
+.consortium-detail-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+/* =========================================================
+   ALL BUTTONS
+========================================================= */
+
+.consortium-detail-actions .ui-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  min-height: 64px;
+
+  padding: 0 1.4rem;
+
+  border-radius: 16px;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+/* =========================================================
+   SECONDARY GREEN
+========================================================= */
+
+.consortium-detail-actions .ui-button--secondary {
+  border: 2px solid rgba(102, 201, 111, 0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4fff5,
+      #e5f8e8
+    );
+
+  color: #24933b;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 5px 0 rgba(36, 147, 59, 0.18);
+}
+
+
+/* =========================================================
+   PRIMARY GREEN
+========================================================= */
+
+.consortium-detail-actions .ui-button--primary {
+  border: 2px solid rgba(255, 255, 255, 0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      #66c96f,
+      #36ad4c 55%,
+      #24933b
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 5px 0 #18772d;
+}
+
+
+/* =========================================================
+   INTERACTION
+========================================================= */
+
+.consortium-detail-actions .ui-button:hover {
+  transform: translateY(-2px);
+}
+
+.consortium-detail-actions .ui-button--secondary:hover {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 7px 0 rgba(36, 147, 59, 0.2);
+}
+
+.consortium-detail-actions .ui-button--primary:hover {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 7px 0 #18772d;
+}
+
+.consortium-detail-actions .ui-button:active {
+  transform: translateY(3px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .consortium-detail-page .page-header {
+    margin-top: 2.5rem;
+  }
+
+  .consortium-detail-page .page-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .consortium-detail-card {
+    padding: 1.4rem;
+    border-radius: 22px;
+  }
+
+  .consortium-detail-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .consortium-detail-actions .ui-button {
+    min-height: 58px;
+  }
+}
+
+/* =========================================
+   CONSORCIO DETAIL - GAME ACTION BUTTONS
+========================================= */
+
+.consortium-detail-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+/* BASE: TODOS EXACTAMENTE IGUALES */
+.consortium-detail-actions .ui-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  min-height: 72px;
+  padding: 0 26px;
+
+  border-radius: 16px;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+/* =========================================
+   BOTÓN SECUNDARIO
+========================================= */
+
+.consortium-detail-actions .ui-button--secondary {
+  border: 2px solid #b9e7c2;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f2fff4,
+      #e5f8e9
+    );
+
+  color: #138b32;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -3px 0 rgba(35, 147, 59, 0.08),
+    0 6px 0 #c8ebd0;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.consortium-detail-actions .ui-button--primary {
+  border: 2px solid #76d384;
+
+  background:
+    linear-gradient(
+      145deg,
+      #5dca69,
+      #36b64b 55%,
+      #28a43d
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 7px 0 #167c2d;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.consortium-detail-actions .ui-button:hover {
+  transform: translateY(-3px);
+}
+
+.consortium-detail-actions .ui-button--secondary:hover {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -3px 0 rgba(35, 147, 59, 0.08),
+    0 9px 0 #c8ebd0;
+}
+
+.consortium-detail-actions .ui-button--primary:hover {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 10px 0 #167c2d;
+}
+
+
+/* =========================================
+   CLICK
+========================================= */
+
+.consortium-detail-actions .ui-button:active {
+  transform: translateY(4px);
+}
+
+.consortium-detail-actions .ui-button--primary:active {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    0 2px 0 #167c2d;
+}
+
+.consortium-detail-actions .ui-button--secondary:active {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 2px 0 #c8ebd0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .consortium-detail-actions {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .consortium-detail-actions .ui-button {
+    min-height: 64px;
+    padding: 0 20px;
+  }
+}
+
+/* =========================================
+   CONSORCIO DETAIL - HERO 3D
+========================================= */
+
+.consortium-detail-card__header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  padding: 8px 0 32px;
+  margin-bottom: 34px;
+
+  border-bottom: 1px solid #dcefe0;
+}
+
+
+/* IMAGEN */
+
+.consortium-detail-card__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 190px;
+  height: 160px;
+  flex-shrink: 0;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(89, 201, 105, 0.15),
+      rgba(89, 201, 105, 0.03) 65%,
+      transparent 70%
+    );
+}
+
+.consortium-detail-card__image {
+  display: block;
+
+  width: 170px;
+  height: 170px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 12px 10px rgba(20, 100, 45, 0.13)
+    );
+}
+
+
+/* INFORMACIÓN */
+
+.consortium-detail-card__info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.consortium-detail-card__label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #15913a;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+}
+
+.consortium-detail-card__info h2 {
+  margin: 0 0 6px;
+
+  color: #21183f;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+
+  letter-spacing: -0.03em;
+}
+
+.consortium-detail-card__info p {
+  margin: 0 0 15px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .consortium-detail-card__header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .consortium-detail-card__visual {
+    width: 100%;
+    height: 150px;
+  }
+
+  .consortium-detail-card__image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* =========================================
+   CONSORCIO DETAIL - PAGE HERO
+========================================= */
+
+.consortium-detail-hero {
+  position: relative;
+
+  margin-top: 72px;
+  margin-bottom: 42px;
+
+  max-width: 900px;
+}
+
+
+/* ETIQUETA */
+
+.consortium-detail-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 12px;
+  padding: 7px 13px;
+
+  border: 1px solid rgba(89, 201, 105, 0.35);
+  border-radius: 999px;
+
+  background: rgba(89, 201, 105, 0.12);
+
+  color: #72dc7d;
+
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+
+/* TÍTULO */
+
+.consortium-detail-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(3rem, 5vw, 4.4rem);
+  font-weight: 900;
+
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+
+/* DIRECCIÓN */
+
+.consortium-detail-hero__address {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 18px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.consortium-detail-hero__pin {
+  color: #59c969;
+
+  font-size: 0.8rem;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(89, 201, 105, 0.35)
+    );
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .consortium-detail-hero {
+    margin-top: 48px;
+    margin-bottom: 30px;
+  }
+
+  .consortium-detail-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .consortium-detail-hero__address {
+    margin-top: 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   MIS EXPENSAS - GAME STYLE
+========================================================= */
+
+.consortium-my-expenses-page {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+.consortium-my-expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.consortium-my-expense-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    auto;
+
+  align-items: center;
+  gap: 28px;
+
+  min-height: 0;
+  padding: 28px 32px;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(102, 201, 111, 0.2);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 7px 0 rgba(36, 147, 59, 0.15),
+    0 18px 32px rgba(4, 1, 25, 0.16);
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.consortium-my-expense-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(102, 201, 111, 0.45);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 9px 0 rgba(36, 147, 59, 0.18),
+    0 22px 38px rgba(4, 1, 25, 0.18);
+}
+
+
+/* =========================
+   ETIQUETAS
+========================= */
+
+.consortium-my-expense-card > div > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #24933b;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   PERÍODO
+========================= */
+
+.consortium-my-expense-card h3 {
+  margin: 0;
+
+  color: #21183f;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   DATOS
+========================= */
+
+.consortium-my-expense-card strong {
+  color: #21183f;
+
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   ZONA DE PAGO
+========================= */
+
+.consortium-my-expense-card > div:last-child {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(36, 147, 59, 0.14);
+}
+
+.consortium-my-expense-card > div:last-child p {
+  margin: 0;
+  margin-right: auto;
+
+  color: #777187;
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.consortium-my-expense-card .ui-button {
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  border: 2px solid #76d384;
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #5dca69,
+      #36b64b 55%,
+      #28a43d
+    );
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 #167c2d;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-my-expense-card .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.12),
+    0 8px 0 #167c2d;
+}
+
+.consortium-my-expense-card .ui-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #167c2d;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+
+  .consortium-my-expense-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    padding: 22px;
+  }
+
+  .consortium-my-expense-card > div:last-child {
+    grid-column: auto;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .consortium-my-expense-card > div:last-child p {
+    margin-right: 0;
+  }
+
+  .consortium-my-expense-card .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   GASTOS DEL CONSORCIO - GAME STYLE
+========================================================= */
+
+.consortium-expenses-page {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+/* RESUMEN */
+
+.consortium-expenses-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+  padding: 26px 30px;
+
+  border: 2px solid rgba(102, 201, 111, 0.2);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 7px 0 rgba(36, 147, 59, 0.15),
+    0 18px 32px rgba(4, 1, 25, 0.16);
+}
+
+.consortium-expenses-summary span {
+  color: #24933b;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.consortium-expenses-summary strong {
+  color: #21183f;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+
+/* LISTA */
+
+.consortium-expenses-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* TARJETA DE GASTO */
+
+.consortium-expense-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  min-height: 0;
+  padding: 24px 28px;
+
+  border: 2px solid rgba(102, 201, 111, 0.18);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fff8
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 6px 0 rgba(36, 147, 59, 0.14),
+    0 16px 28px rgba(4, 1, 25, 0.14);
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.consortium-expense-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(102, 201, 111, 0.42);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    0 8px 0 rgba(36, 147, 59, 0.17),
+    0 20px 34px rgba(4, 1, 25, 0.17);
+}
+
+
+/* CONCEPTO */
+
+.consortium-expense-card h3 {
+  margin: 0 0 7px;
+
+  color: #21183f;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.consortium-expense-card p {
+  margin: 0;
+
+  color: #777187;
+
+  font-size: 0.92rem;
+}
+
+
+/* MONTO */
+
+.consortium-expense-card > strong {
+  flex-shrink: 0;
+
+  color: #24933b;
+
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+
+  .consortium-expenses-summary {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 8px;
+    padding: 22px;
+  }
+
+  .consortium-expense-card {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 14px;
+    padding: 22px;
+  }
+}
+
+/* =========================
+   REGISTRAR GASTO
+========================= */
+
+.consortium-expense-create-page .consortium-expense-form-card {
+  padding: 34px;
+  border: 2px solid rgba(55, 190, 85, 0.18);
+  border-radius: 26px;
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.16),
+    0 18px 32px rgba(8, 3, 35, 0.14);
+}
+
+.consortium-expense-create-page .consortium-expense-form {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* LABELS */
+
+.consortium-expense-create-page
+.consortium-expense-form label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #078a2b;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* INPUTS */
+
+.consortium-expense-create-page
+.consortium-expense-form input {
+  width: 100%;
+  min-height: 62px;
+
+  padding: 0 20px;
+
+  border: 2px solid #d9eadc;
+  border-radius: 18px;
+
+  background: #ffffff;
+  color: #17112f;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  outline: none;
+
+  box-shadow:
+    inset 0 -3px 0 rgba(30, 130, 55, 0.05);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.consortium-expense-create-page
+.consortium-expense-form input:focus {
+  border-color: #43c75b;
+
+  box-shadow:
+    0 0 0 4px rgba(67, 199, 91, 0.12),
+    inset 0 -3px 0 rgba(30, 130, 55, 0.05);
+}
+
+
+/* ACCIONES */
+
+.consortium-expense-create-page
+.consortium-expense-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 6px;
+}
+
+
+/* BOTÓN REGISTRAR */
+
+.consortium-expense-create-page
+.consortium-expense-form__actions
+.ui-button--primary {
+  min-height: 58px;
+  padding: 0 28px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #58d06b,
+      #2fba49 55%,
+      #20a83c
+    );
+
+  color: #ffffff;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.1),
+    0 7px 0 #08772a;
+}
+
+
+/* BOTÓN CANCELAR */
+
+.consortium-expense-create-page
+.consortium-expense-form__actions
+.ui-button--secondary {
+  min-height: 58px;
+  padding: 0 28px;
+
+  border: 2px solid #d9eadc;
+  border-radius: 17px;
+
+  background: #effaf1;
+  color: #078a2b;
+
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    0 6px 0 #c5e9cc;
+}
+
+
+/* HOVER */
+
+.consortium-expense-create-page
+.consortium-expense-form__actions
+.ui-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .consortium-expense-create-page
+  .consortium-expense-form-card {
+    padding: 24px 20px;
+  }
+
+  .consortium-expense-create-page
+  .consortium-expense-form__actions {
+    flex-direction: column;
+  }
+
+  .consortium-expense-create-page
+  .consortium-expense-form__actions
+  .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   REGISTRAR INGRESO
+========================= */
+
+.consortium-income-create-page .consortium-income-form-card {
+  padding: 34px;
+  border: 2px solid rgba(55, 190, 85, 0.18);
+  border-radius: 26px;
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.16),
+    0 18px 32px rgba(8, 3, 35, 0.14);
+}
+
+.consortium-income-create-page .consortium-income-form {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* LABELS */
+
+.consortium-income-create-page
+.consortium-income-form label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #078a2b;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* INPUTS */
+
+.consortium-income-create-page
+.consortium-income-form input {
+  width: 100%;
+  min-height: 62px;
+  padding: 0 20px;
+
+  border: 2px solid #d9eadc;
+  border-radius: 18px;
+
+  background: #ffffff;
+  color: #17112f;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  outline: none;
+
+  box-shadow:
+    inset 0 -3px 0 rgba(30, 130, 55, 0.05);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.consortium-income-create-page
+.consortium-income-form input:focus {
+  border-color: #43c75b;
+
+  box-shadow:
+    0 0 0 4px rgba(67, 199, 91, 0.12),
+    inset 0 -3px 0 rgba(30, 130, 55, 0.05);
+}
+
+
+/* BOTONES */
+
+.consortium-income-create-page
+.consortium-income-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+
+/* REGISTRAR INGRESO */
+
+.consortium-income-create-page
+.consortium-income-form__actions
+.ui-button--primary {
+  min-height: 58px;
+  padding: 0 28px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #58d06b,
+      #2fba49 55%,
+      #20a83c
+    );
+
+  color: #ffffff;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.1),
+    0 7px 0 #08772a;
+}
+
+
+/* CANCELAR */
+
+.consortium-income-create-page
+.consortium-income-form__actions
+.ui-button--secondary {
+  min-height: 58px;
+  padding: 0 28px;
+
+  border: 2px solid #d9eadc;
+  border-radius: 17px;
+
+  background: #effaf1;
+  color: #078a2b;
+
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    0 6px 0 #c5e9cc;
+}
+
+
+/* HOVER */
+
+.consortium-income-create-page
+.consortium-income-form__actions
+.ui-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .consortium-income-create-page
+  .consortium-income-form-card {
+    padding: 24px 20px;
+  }
+
+  .consortium-income-create-page
+  .consortium-income-form__actions {
+    flex-direction: column;
+  }
+
+  .consortium-income-create-page
+  .consortium-income-form__actions
+  .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   RESUMEN ECONÓMICO
+========================= */
+
+.consortium-summary-page .consortium-summary-grid {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* CARD BASE */
+
+.consortium-summary-page .consortium-summary-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  min-height: 125px;
+  padding: 30px 38px;
+
+  border: 2px solid rgba(55, 190, 85, 0.18);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.16),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+}
+
+
+/* TEXTO SUPERIOR */
+
+.consortium-summary-page
+.consortium-summary-card span {
+  color: #078a2b;
+
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* MONTO */
+
+.consortium-summary-page
+.consortium-summary-card strong {
+  color: #17112f;
+
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   GASTOS - SEGUNDA CARD
+========================= */
+
+.consortium-summary-page
+.consortium-summary-card:nth-child(2) {
+  border-color: rgba(235, 93, 93, 0.2);
+
+  box-shadow:
+    0 8px 0 rgba(175, 55, 55, 0.14),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+}
+
+.consortium-summary-page
+.consortium-summary-card:nth-child(2) span {
+  color: #d44c4c;
+}
+
+.consortium-summary-page
+.consortium-summary-card:nth-child(2) strong {
+  color: #d44c4c;
+}
+
+
+/* =========================
+   SALDO DISPONIBLE
+========================= */
+
+.consortium-summary-page
+.consortium-summary-card--balance {
+  min-height: 145px;
+
+  border-color: rgba(45, 190, 75, 0.35);
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fff7,
+      #e9faed
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 9px 0 rgba(15, 125, 45, 0.22),
+    0 20px 35px rgba(8, 3, 35, 0.14);
+}
+
+.consortium-summary-page
+.consortium-summary-card--balance span {
+  color: #078a2b;
+}
+
+.consortium-summary-page
+.consortium-summary-card--balance strong {
+  color: #078a2b;
+  font-size: 2.4rem;
+}
+
+
+/* HOVER SUTIL */
+
+.consortium-summary-page
+.consortium-summary-card {
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.consortium-summary-page
+.consortium-summary-card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .consortium-summary-page
+  .consortium-summary-card {
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-height: auto;
+    padding: 26px 24px;
+  }
+
+  .consortium-summary-page
+  .consortium-summary-card strong {
+    font-size: 1.7rem;
+  }
+
+  .consortium-summary-page
+  .consortium-summary-card--balance strong {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   UNIDADES
+========================= */
+
+.consortium-units-page {
+  display: grid;
+  gap: 28px;
+}
+
+
+/* =========================
+   RESUMEN PARTICIPACIÓN
+========================= */
+
+.consortium-units-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 30px;
+
+  padding: 28px 36px;
+
+  border: 2px solid rgba(47, 190, 78, 0.2);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.16),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+}
+
+.consortium-units-summary span {
+  color: #078a2b;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.consortium-units-summary strong {
+  color: #078a2b;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.consortium-units-summary p {
+  flex-basis: 100%;
+  margin: 0;
+
+  color: #777187;
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.consortium-units-form-card {
+  padding: 32px 36px;
+
+  border: 2px solid rgba(47, 190, 78, 0.16);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.14),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+}
+
+.consortium-units-form-card h2 {
+  margin: 0 0 24px;
+
+  color: #17112f;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.consortium-units-form {
+  display: grid;
+  gap: 16px;
+}
+
+
+/* BOTÓN AGREGAR */
+
+.consortium-units-form .ui-button {
+  justify-self: start;
+
+  min-height: 54px;
+  padding: 0 28px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #58cf6d,
+      #2fba4b 55%,
+      #23963b
+    );
+
+  color: #ffffff;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 7px 0 #11772b;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-units-form .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 9px 0 #11772b;
+}
+
+.consortium-units-form .ui-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #11772b;
+}
+
+
+/* =========================
+   UNIDADES REGISTRADAS
+========================= */
+
+.consortium-units-list-section {
+  display: grid;
+  gap: 20px;
+}
+
+.consortium-units-list-section > h2 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.consortium-units-list {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* =========================
+   TARJETA UNIDAD
+========================= */
+
+.consortium-unit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  min-height: 125px;
+  padding: 26px 36px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.15),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.consortium-unit-card:hover {
+  transform: translateY(-2px);
+}
+
+.consortium-unit-card h3 {
+  margin: 0 0 6px;
+
+  color: #17112f;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.consortium-unit-card p {
+  margin: 0;
+
+  color: #777187;
+  font-size: 0.95rem;
+}
+
+
+/* PORCENTAJE */
+
+.consortium-unit-card__percentage {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.consortium-unit-card__percentage span {
+  color: #078a2b;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.consortium-unit-card__percentage strong {
+  color: #078a2b;
+
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .consortium-units-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .consortium-units-form-card {
+    padding: 26px 22px;
+  }
+
+  .consortium-unit-card {
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .consortium-unit-card__percentage {
+    align-items: flex-start;
+  }
+
+  .consortium-units-form .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   EXPENSAS - ADMINISTRACIÓN
+========================= */
+
+.consortium-expenses-page {
+  display: grid;
+  gap: 28px;
+}
+
+
+/* =========================
+   PERÍODO
+========================= */
+
+.consortium-expenses-period {
+  padding: 30px 36px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.14),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+}
+
+.consortium-expenses-period h2 {
+  margin: 0 0 22px;
+
+  color: #17112f;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.consortium-expenses-period__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: end;
+}
+
+.consortium-expenses-period__fields label {
+  display: grid;
+  gap: 8px;
+
+  color: #17112f;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.consortium-expenses-period__fields select {
+  width: 100%;
+  min-height: 58px;
+  padding: 0 18px;
+
+  border: 1px solid #dedbea;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: #17112f;
+  font-family: inherit;
+  font-size: 1rem;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.consortium-expenses-period__fields select:focus {
+  border-color: #32b94d;
+
+  box-shadow:
+    0 0 0 3px rgba(50, 185, 77, 0.12);
+}
+
+
+/* =========================
+   LISTADO DE UNIDADES
+========================= */
+
+.consortium-expenses-list {
+  display: grid;
+  gap: 22px;
+}
+
+
+/* =========================
+   TARJETA DE EXPENSA
+========================= */
+
+.consortium-expense-unit-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+
+  min-height: 150px;
+  padding: 28px 36px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.14),
+    0 18px 32px rgba(8, 3, 35, 0.12);
+
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.consortium-expense-unit-card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   INFORMACIÓN UNIDAD
+========================= */
+
+.consortium-expense-unit-card__info {
+  display: grid;
+  gap: 5px;
+}
+
+.consortium-expense-unit-card__info > span {
+  color: #078a2b;
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.consortium-expense-unit-card__info h3 {
+  margin: 0;
+
+  color: #17112f;
+  font-size: 1.55rem;
+  font-weight: 900;
+}
+
+.consortium-expense-unit-card__info p {
+  margin: 0;
+
+  color: #777187;
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   MONTO / ESTADO
+========================= */
+
+.consortium-expense-unit-card__amount {
+  display: grid;
+  gap: 10px;
+}
+
+.consortium-expense-unit-card__amount > span {
+  color: #078a2b;
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.consortium-expense-unit-card__amount h3 {
+  margin: 0;
+
+  color: #078a2b;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.consortium-expense-unit-card__amount .ui-button,
+.consortium-expenses-actions .ui-button {
+  min-height: 52px;
+  padding: 0 26px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #58cf6d,
+      #2fba4b 55%,
+      #23963b
+    );
+
+  color: #ffffff;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 7px 0 #11772b;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.consortium-expense-unit-card__amount .ui-button:hover,
+.consortium-expenses-actions .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 9px 0 #11772b;
+}
+
+.consortium-expense-unit-card__amount .ui-button:active,
+.consortium-expenses-actions .ui-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #11772b;
+}
+
+
+/* =========================
+   GUARDAR EXPENSAS
+========================= */
+
+.consortium-expenses-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-top: 4px;
+}
+
+.consortium-expenses-actions .ui-button {
+  min-width: 210px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .consortium-expenses-period {
+    padding: 24px 22px;
+  }
+
+  .consortium-expenses-period__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .consortium-expense-unit-card {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+    padding: 24px;
+
+    gap: 24px;
+  }
+
+  .consortium-expenses-actions {
+    justify-content: stretch;
+  }
+
+  .consortium-expenses-actions .ui-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   GENERAR LIQUIDACIÓN
+========================= */
+
+.consortium-liquidation-create-page {
+  display: grid;
+  gap: 28px;
+}
+
+
+/* =========================
+   TARJETA FORMULARIO
+========================= */
+
+.consortium-liquidation-form-card {
+  padding: 34px 38px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 28px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.14),
+    0 20px 36px rgba(8, 3, 35, 0.14);
+}
+
+.consortium-liquidation-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+
+/* =========================
+   BLOQUE EXPLICATIVO
+========================= */
+
+.consortium-liquidation-form__info {
+  grid-column: 1 / -1;
+
+  padding: 22px 26px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #effcf2,
+      #e4f8e9
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.7),
+    0 5px 0 rgba(20, 110, 45, 0.10);
+}
+
+.consortium-liquidation-form__info strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #078a2b;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.consortium-liquidation-form__info p {
+  margin: 0;
+
+  color: #625d72;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   ACCIONES
+========================= */
+
+.consortium-liquidation-form__actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+
+  margin-top: 4px;
+}
+
+.consortium-liquidation-form__actions .ui-button {
+  min-height: 54px;
+  min-width: 180px;
+
+  border-radius: 16px;
+
+  font-weight: 900;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.consortium-liquidation-form__actions
+.ui-button:not(.ui-button--secondary) {
+  background:
+    linear-gradient(
+      145deg,
+      #58cf6d,
+      #2fba4b 55%,
+      #23963b
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 7px 0 #11772b;
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
+
+.consortium-liquidation-form__actions
+.ui-button:not(.ui-button--secondary):hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 9px 0 #11772b;
+}
+
+.consortium-liquidation-form__actions
+.ui-button:not(.ui-button--secondary):active {
+  transform: translateY(4px);
+
+  box-shadow:
+    0 2px 0 #11772b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .consortium-liquidation-form-card {
+    padding: 26px 22px;
+  }
+
+  .consortium-liquidation-form {
+    grid-template-columns: 1fr;
+  }
+
+  .consortium-liquidation-form__info,
+  .consortium-liquidation-form__actions {
+    grid-column: 1;
+  }
+
+  .consortium-liquidation-form__actions {
+    flex-direction: column;
+  }
+
+  .consortium-liquidation-form__actions .ui-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================
+   LISTADO DE LIQUIDACIONES
+========================= */
+
+.consortium-liquidations-page {
+  display: grid;
+  gap: 28px;
+}
+
+.consortium-liquidations-list {
+  display: grid;
+  gap: 26px;
+}
+
+
+/* =========================
+   CARD LIQUIDACIÓN
+========================= */
+
+.consortium-liquidation-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px 40px;
+
+  padding: 30px 36px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 26px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 8px 0 rgba(20, 110, 45, 0.14),
+    0 18px 32px rgba(8, 3, 35, 0.14);
+}
+
+
+/* =========================
+   PERÍODO + ESTADO
+========================= */
+
+.consortium-liquidation-card__main {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.consortium-liquidation-card__label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #078a2b;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.consortium-liquidation-card__main h2 {
+  margin: 0;
+
+  color: #15113c;
+  font-size: 1.55rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.consortium-liquidation-card__amount {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.consortium-liquidation-card__amount span {
+  color: #777187;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.consortium-liquidation-card__amount strong {
+  color: #078a2b;
+  font-size: 1.65rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   FECHA
+========================= */
+
+.consortium-liquidation-card__footer {
+  grid-column: 1;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(21, 17, 60, 0.10);
+
+  color: #777187;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+
+/* =========================
+   VER DETALLE
+========================= */
+
+.consortium-liquidation-card > .ui-button {
+  grid-column: 2;
+  grid-row: 3;
+
+  align-self: center;
+
+  min-width: 160px;
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid rgba(255,255,255,.35);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #58cf6d,
+      #2fba4b 55%,
+      #23963b
+    );
+
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 7px 0 #11772b;
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
+
+.consortium-liquidation-card > .ui-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.32),
+    inset 0 -4px 0 rgba(0,0,0,.12),
+    0 9px 0 #11772b;
+}
+
+.consortium-liquidation-card > .ui-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #11772b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .consortium-liquidation-card {
+    grid-template-columns: 1fr;
+    padding: 26px 22px;
+  }
+
+  .consortium-liquidation-card__main,
+  .consortium-liquidation-card__footer,
+  .consortium-liquidation-card > .ui-button {
+    grid-column: 1;
+  }
+
+  .consortium-liquidation-card > .ui-button {
+    grid-row: auto;
+    width: 100%;
+  }
+}
+
+/* =========================
+   DETALLE DE LIQUIDACIÓN
+========================= */
+
+.consortium-liquidation-detail-page {
+  display: grid;
+  gap: 28px;
+}
+
+
+/* =========================
+   RESUMEN DEL PERÍODO
+========================= */
+
+.consortium-liquidation-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.consortium-liquidation-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  min-height: 120px;
+  padding: 26px 28px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 24px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 7px 0 rgba(20, 110, 45, 0.14),
+    0 16px 28px rgba(8, 3, 35, 0.12);
+}
+
+.consortium-liquidation-summary-card span {
+  color: #078a2b;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.consortium-liquidation-summary-card strong {
+  color: #15113c;
+
+  font-size: 1.55rem;
+  font-weight: 900;
+}
+
+
+/* TOTAL COBRADO */
+
+.consortium-liquidation-summary-card:nth-child(2) strong {
+  color: #078a2b;
+}
+
+
+/* TOTAL PENDIENTE */
+
+.consortium-liquidation-summary-card:nth-child(3) strong {
+  color: #d78a00;
+}
+
+
+/* =========================
+   ESTADO LIQUIDACIÓN
+========================= */
+
+.consortium-liquidation-detail-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 24px 28px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 22px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 7px 0 rgba(20, 110, 45, 0.13);
+}
+
+.consortium-liquidation-detail-summary span {
+  color: #15113c;
+
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   EXPENSAS DEL PERÍODO
+========================= */
+
+.consortium-liquidation-expenses {
+  display: grid;
+  gap: 18px;
+
+  margin-top: 12px;
+}
+
+.consortium-liquidation-expenses > h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.65rem;
+  font-weight: 900;
+}
+
+.consortium-liquidation-expenses > p {
+  margin: -6px 0 4px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.95rem;
+}
+
+.consortium-liquidation-expenses__list {
+  display: grid;
+  gap: 20px;
+}
+
+
+/* =========================
+   CARD DE CADA UNIDAD
+========================= */
+
+.consortium-liquidation-expenses
+.consortium-expense-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 30px;
+
+  min-height: auto;
+  padding: 26px 32px;
+
+  border: 2px solid rgba(47, 190, 78, 0.18);
+  border-radius: 24px;
+
+  background: #fbfffc;
+
+  box-shadow:
+    0 7px 0 rgba(20, 110, 45, 0.14),
+    0 16px 28px rgba(8, 3, 35, 0.12);
+}
+
+.consortium-liquidation-expenses
+.consortium-expense-card span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #078a2b;
+
+  font-size: 0.75rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.consortium-liquidation-expenses
+.consortium-expense-card h3 {
+  margin: 0;
+
+  color: #15113c;
+
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.consortium-liquidation-expenses
+.consortium-expense-card strong {
+  color: #15113c;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .consortium-liquidation-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consortium-liquidation-expenses
+  .consortium-expense-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .consortium-liquidation-detail-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

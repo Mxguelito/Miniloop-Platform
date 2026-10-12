@@ -1,0 +1,20 @@
+.page-container {
+  width: 100%;
+  max-width: var(--page-max-width);
+
+  margin: 0 auto;
+
+  padding:
+    var(--space-xl)
+    var(--space-lg)
+    var(--space-2xl);
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    padding:
+      var(--space-lg)
+      var(--space-md)
+      var(--space-xl);
+  }
+}

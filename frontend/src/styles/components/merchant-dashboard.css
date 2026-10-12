@@ -1,0 +1,867 @@
+/* =========================================
+   MUNDO MINILOOP
+========================================= */
+
+.merchant-world {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(67, 126, 255, 0.34),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #160b3d 0%,
+      #24105a 48%,
+      #10072d 100%
+    );
+
+  color: #ffffff;
+}
+
+/* =========================================
+   HEADER MUNDO COMERCIO
+========================================= */
+
+.merchant-world-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 32px;
+  margin-bottom: 48px;
+}
+
+/* MINILOOP */
+.merchant-world-header__brand {
+  color: #a98cff;
+
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+/* BOTÓN VOLVER */
+.merchant-world-header__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 22px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 rgba(10, 55, 145, 0.55),
+    0 12px 22px rgba(38, 126, 232, 0.22);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+/* HOVER */
+.merchant-world-header__back:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 rgba(10, 55, 145, 0.5),
+    0 16px 26px rgba(38, 126, 232, 0.28);
+}
+
+/* CLICK */
+.merchant-world-header__back:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    0 2px 0 rgba(10, 55, 145, 0.55),
+    0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .merchant-world-header {
+    padding-top: 22px;
+    margin-bottom: 36px;
+  }
+
+  .merchant-world-header__back {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 0.82rem;
+  }
+
+  .merchant-world-header__brand {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================================
+   MERCHANT DASHBOARD
+========================================= */
+
+.merchant-dashboard {
+  margin-top: 32px;
+}
+
+
+/* =========================================
+   INFORMACIÓN GENERAL
+========================================= */
+
+.merchant-dashboard__info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 24px;
+  padding: 20px 26px;
+
+  border: 3px solid rgba(255, 255, 255, 0.38);
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -5px 0 rgba(0, 0, 0, 0.12),
+    0 7px 0 rgba(8, 3, 35, 0.35),
+    0 14px 24px rgba(0, 0, 0, 0.22);
+}
+
+.merchant-dashboard__info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  min-width: 180px;
+  padding: 14px 20px;
+
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+
+  background: rgba(20, 24, 110, 0.2);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.merchant-dashboard__label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.merchant-dashboard__info strong {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.merchant-dashboard__heading {
+  margin-bottom: 24px;
+}
+
+.merchant-dashboard__heading h2 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.merchant-dashboard__heading p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.merchant-dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.merchant-dashboard__card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  min-height: 360px;
+  padding: 32px;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(255, 255, 255, 0.38);
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -6px 0 rgba(0, 0, 0, 0.12),
+    0 10px 0 rgba(8, 3, 35, 0.35),
+    0 20px 32px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.merchant-dashboard__card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -6px 0 rgba(0, 0, 0, 0.12),
+    0 14px 0 rgba(8, 3, 35, 0.3),
+    0 26px 38px rgba(0, 0, 0, 0.32);
+}
+
+.merchant-dashboard__card h3 {
+  margin: 18px 0 10px;
+
+  color: #ffffff;
+
+  font-size: 1.65rem;
+  font-weight: 900;
+}
+
+.merchant-dashboard__card p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   LINK / BOTÓN
+========================================= */
+
+.merchant-dashboard__link {
+  display: block;
+  margin-top: 24px;
+  text-decoration: none;
+}
+
+/* BOTONES ACTIVOS */
+.merchant-dashboard__link button {
+  width: 100%;
+  min-height: 58px;
+
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #725cff 0%,
+      #593ff1 55%,
+      #4931d6 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.14),
+    0 6px 0 #2c1a9d,
+    0 11px 18px rgba(0, 0, 0, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.merchant-dashboard__link button:hover {
+  transform: translateY(-4px);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 #2c1a9d,
+    0 16px 24px rgba(0, 0, 0, 0.24);
+}
+
+.merchant-dashboard__link button:active {
+  transform: translateY(4px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.12),
+    0 2px 0 #2c1a9d,
+    0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   IMÁGENES 3D
+========================================= */
+
+.merchant-dashboard__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 170px;
+  margin-bottom: 10px;
+}
+
+.merchant-dashboard__image {
+  display: block;
+
+  width: 300px;
+  height: 300px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 14px 18px rgba(0, 0, 0, 0.25)
+    );
+
+  transition:
+    transform 0.2s ease;
+}
+
+.merchant-dashboard__card:hover
+.merchant-dashboard__image {
+  transform:
+    translateY(-8px)
+    scale(1.08);
+}
+
+
+/* =========================================
+   IMAGEN 3D - PEDIDOS
+========================================= */
+
+.merchant-dashboard__image--orders {
+  width: 200px;
+  height: 200px;
+}
+
+
+/* =========================================
+   IMAGEN 3D - INFORMACIÓN
+========================================= */
+
+.merchant-dashboard__image--info {
+  width: 220px;
+  height: 220px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .merchant-dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .merchant-dashboard__info {
+    gap: 32px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .merchant-dashboard__info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .merchant-dashboard__card {
+    padding: 26px;
+  }
+
+  .merchant-dashboard__image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* =========================================
+   ESTADO DEL COMERCIO
+========================================= */
+
+.merchant-dashboard__info .status-badge {
+  align-self: flex-start;
+  width: auto;
+  min-width: 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   MUNDO MINILOOP - PRODUCTOS
+========================================= */
+
+.merchant-products-world {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(67, 126, 255, 0.34),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #160b3d 0%,
+      #24105a 48%,
+      #10072d 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.merchant-products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 32px;
+  margin-bottom: 48px;
+}
+
+
+/* MINILOOP */
+
+.merchant-products-header__brand {
+  color: #a98cff;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* VOLVER A COMERCIO */
+
+.merchant-products-header__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 22px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 6px 0 rgba(10, 55, 145, 0.55),
+    0 12px 22px rgba(38, 126, 232, 0.22);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+
+.merchant-products-header__back:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 rgba(10, 55, 145, 0.5),
+    0 16px 26px rgba(38, 126, 232, 0.28);
+}
+
+
+.merchant-products-header__back:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    0 2px 0 rgba(10, 55, 145, 0.55);
+}
+
+/* =========================================
+   PRODUCT CARD - MUNDO MINILOOP
+========================================= */
+
+.merchant-products-world .merchant-product-card {
+  position: relative;
+
+  padding: 28px;
+
+  border: 3px solid rgba(255, 255, 255, 0.38);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4da6ff 0%,
+      #287be8 55%,
+      #1769e0 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -6px 0 rgba(0, 0, 0, 0.12),
+    0 9px 0 rgba(8, 3, 35, 0.35),
+    0 18px 28px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* HOVER */
+
+.merchant-products-world .merchant-product-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -6px 0 rgba(0, 0, 0, 0.12),
+    0 13px 0 rgba(8, 3, 35, 0.3),
+    0 25px 38px rgba(0, 0, 0, 0.32);
+}
+
+
+/* NOMBRE DEL PRODUCTO */
+
+.merchant-products-world .merchant-product-card h3 {
+  color: #ffffff;
+
+  font-size: 1.55rem;
+  font-weight: 900;
+}
+
+
+/* PRECIO Y STOCK */
+
+.merchant-products-world .merchant-product-card__data > div {
+  padding: 18px;
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  background: rgba(20, 24, 110, 0.22);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+/* PRECIO / STOCK - LABEL */
+
+.merchant-products-world
+.merchant-product-card__data
+span {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+
+/* VALORES */
+
+.merchant-products-world
+.merchant-product-card__data
+strong {
+  color: #ffffff;
+
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+/* =========================================
+   BOTONES PRODUCT CARD - 3D
+========================================= */
+
+.merchant-products-world
+.merchant-product-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+
+/* =========================================
+   BOTÓN EDITAR
+========================================= */
+
+.merchant-products-world
+.merchant-product-card__actions
+.ui-button--secondary {
+  min-height: 56px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #765fff 0%,
+      #5c43f2 55%,
+      #4931d6 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.14),
+    0 6px 0 #2c1a9d,
+    0 11px 18px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+
+/* HOVER EDITAR */
+
+.merchant-products-world
+.merchant-product-card__actions
+.ui-button--secondary:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.14),
+    0 9px 0 #2c1a9d,
+    0 16px 22px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CLICK EDITAR */
+
+.merchant-products-world
+.merchant-product-card__actions
+.ui-button--secondary:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    0 2px 0 #2c1a9d,
+    0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   BOTÓN DESACTIVAR
+========================================= */
+
+.merchant-products-world
+.merchant-product-card__actions
+.ui-button--danger {
+  min-height: 56px;
+
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ff6969 0%,
+      #ee4141 55%,
+      #d92e2e 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.14),
+    0 6px 0 #9d2020,
+    0 11px 18px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+
+/* HOVER DESACTIVAR */
+
+.merchant-products-world
+.merchant-product-card__actions
+.ui-button--danger:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.14),
+    0 9px 0 #9d2020,
+    0 16px 22px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CLICK DESACTIVAR */
+
+.merchant-products-world
+.merchant-product-card__actions
+.ui-button--danger:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    0 2px 0 #9d2020,
+    0 5px 10px rgba(0, 0, 0, 0.18);
+}
+.merchant-dashboard__card--orders {
+  position: relative;
+}
+
+.merchant-dashboard__notification {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+
+  border-radius: 999px;
+  background: #e53935;
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.25);
+  z-index: 2;
+}

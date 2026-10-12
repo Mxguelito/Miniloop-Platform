@@ -1,0 +1,1081 @@
+/* =========================================================
+   CUSTOMER ORDER DETAIL
+   MINILOOP - MIS PEDIDOS
+========================================================= */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.customer-order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-top: var(--space-xl);
+  margin-bottom: 2rem;
+}
+
+
+.customer-order-header__eyebrow {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: #ffb52e;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.customer-order-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.5rem, 5vw, 3.4rem);
+  font-weight: 900;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+
+  text-shadow:
+    0 4px 0 rgba(20, 10, 70, 0.18);
+}
+
+
+.customer-order-header p {
+  margin: 0.65rem 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   COMERCIO
+========================================================= */
+
+.customer-order-store {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 1.8rem 2rem;
+
+  margin-bottom: 1.7rem;
+
+  overflow: hidden;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #faf8ff 100%
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -5px 0 rgba(240, 122, 0, 0.06),
+    0 8px 0 rgba(10, 5, 48, 0.25),
+    0 16px 28px rgba(0, 0, 0, 0.14);
+}
+
+
+.customer-order-store__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff8e8,
+      #fff0d0
+    );
+
+  border: 2px solid rgba(255, 181, 46, 0.3);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 5px 0 rgba(240, 122, 0, 0.14);
+}
+
+.customer-order-store__image {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.customer-order-store span {
+  display: block;
+
+  margin-bottom: 0.25rem;
+
+  color: #8b829a;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+
+.customer-order-store h2 {
+  margin: 0 0 0.35rem;
+
+  color: #21183f;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+
+.customer-order-store p {
+  margin: 0;
+
+  color: #777187;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PURCHASE CARD
+========================================================= */
+
+.order-detail-card {
+  position: relative;
+
+  padding: 2rem;
+
+  margin-bottom: 1.7rem;
+
+  overflow: hidden;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #faf8ff 100%
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -5px 0 rgba(240, 122, 0, 0.06),
+    0 8px 0 rgba(10, 5, 48, 0.25),
+    0 16px 28px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   PURCHASE HEADER
+========================================================= */
+
+.order-detail-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+
+.order-detail-card__eyebrow {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: #f07a00;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+.order-detail-card__header h2 {
+  margin: 0;
+
+  color: #21183f;
+
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   PRODUCT COUNT
+========================================================= */
+
+.order-detail-card__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 1.1rem;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffb52e,
+      #f07a00
+    );
+
+  color: #ffffff;
+
+  font-size: 0.88rem;
+  font-weight: 900;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.1),
+    0 5px 0 #bd5d00;
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.order-detail__items {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.order-detail__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+
+  padding: 1.25rem 0;
+
+  border-bottom:
+    1px solid rgba(240, 122, 0, 0.16);
+}
+
+
+.order-detail__item:first-child {
+  padding-top: 0;
+}
+
+
+.order-detail__product {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+
+/* =========================================================
+   PRODUCT ICON
+========================================================= */
+
+.order-detail__product-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  border:
+    2px solid rgba(240, 122, 0, 0.10);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff9ef,
+      #fff2dc
+    );
+
+  font-size: 1.45rem;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 4px 0 rgba(240, 122, 0, 0.1);
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.order-detail__item-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+
+
+.order-detail__item-info strong {
+  color: #21183f;
+
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+
+.order-detail__item-info span {
+  color: #777187;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+
+.order-detail__subtotal {
+  flex-shrink: 0;
+
+  color: #21183f;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.order-detail__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-top: 0.4rem;
+
+  padding-top: 1.6rem;
+}
+
+
+.order-detail__total > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+
+
+.order-detail__total > div > strong {
+  color: #21183f;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+
+.order-detail__total > div > span {
+  color: #777187;
+
+  font-size: 0.9rem;
+}
+
+
+.order-detail__total-price {
+  flex-shrink: 0;
+
+  color: #f07a00;
+
+  font-size: 2.1rem;
+  font-weight: 900;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   CANCEL
+========================================================= */
+
+.order-cancel-card {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 2rem;
+
+  margin-bottom: 1.7rem;
+
+  border:
+    2px solid rgba(217, 45, 32, 0.12);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff7f7
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 7px 0 rgba(120, 30, 30, 0.12),
+    0 15px 26px rgba(0, 0, 0, 0.10);
+}
+
+
+.order-cancel-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffeded,
+      #ffdede
+    );
+
+  color: #d92d20;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+
+  box-shadow:
+    0 4px 0 rgba(217, 45, 32, 0.12);
+}
+
+
+.order-cancel-card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  gap: 2rem;
+}
+
+
+.order-cancel-card__eyebrow {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: #d92d20;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.07em;
+
+  text-transform: uppercase;
+}
+
+
+.order-cancel-card h2 {
+  margin: 0 0 0.4rem;
+
+  color: #21183f;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+
+.order-cancel-card p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #777187;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   COMPLETED / CANCELLED
+========================================================= */
+
+.customer-order-success,
+.customer-order-cancelled {
+  display: flex;
+  align-items: center;
+
+  gap: 1.25rem;
+
+  padding: 1.5rem 2rem;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   COMPLETED
+========================================================= */
+
+.customer-order-success {
+  border:
+    2px solid rgba(8, 116, 67, 0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      #effcf5,
+      #e4f8ed
+    );
+
+  color: #087443;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    0 6px 0 rgba(8, 116, 67, 0.10);
+}
+
+
+.customer-order-success__icon,
+.customer-order-cancelled__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+
+.customer-order-success__icon {
+  background: #3fc47a;
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 4px 0 #178c51;
+}
+
+
+.customer-order-success strong,
+.customer-order-cancelled strong {
+  display: block;
+
+  margin-bottom: 0.25rem;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+
+.customer-order-success p,
+.customer-order-cancelled p {
+  margin: 0;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   CANCELLED
+========================================================= */
+
+.customer-order-cancelled {
+  border:
+    2px solid rgba(198, 40, 40, 0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff5f5,
+      #ffe8e8
+    );
+
+  color: #c62828;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    0 6px 0 rgba(198, 40, 40, 0.10);
+}
+
+
+.customer-order-cancelled__icon {
+  background: #ef5350;
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 4px 0 #b71c1c;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .customer-order-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+
+  .customer-order-header h1 {
+    font-size: 2.4rem;
+  }
+
+
+  .customer-order-store,
+  .order-detail-card,
+  .order-cancel-card {
+    padding: 1.5rem;
+
+    border-radius: 20px;
+  }
+
+
+  .order-cancel-card__content {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+
+  .order-cancel-card__content .ui-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .customer-order-header {
+    margin-top: 1.5rem;
+  }
+
+
+  .customer-order-header h1 {
+    font-size: 2.15rem;
+  }
+
+
+  /* COMERCIO */
+
+  .customer-order-store {
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    padding: 1.25rem;
+  }
+
+
+  .customer-order-store__icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 15px;
+
+    font-size: 1.5rem;
+  }
+
+
+  .customer-order-store h2 {
+    font-size: 1.25rem;
+  }
+
+
+  /* HEADER COMPRA */
+
+  .order-detail-card__header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+
+  .order-detail-card__count {
+    min-height: 40px;
+
+    padding: 0 0.9rem;
+  }
+
+
+  /* PRODUCTO */
+
+  .order-detail__item {
+    align-items: flex-start;
+
+    gap: 1rem;
+  }
+
+
+  .order-detail__product {
+    align-items: flex-start;
+  }
+
+
+  .order-detail__product-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 13px;
+  }
+
+
+  .order-detail__subtotal {
+    font-size: 0.95rem;
+  }
+
+
+  /* TOTAL */
+
+  .order-detail__total {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 0.8rem;
+  }
+
+
+  .order-detail__total-price {
+    font-size: 1.8rem;
+  }
+
+
+  /* ESTADOS */
+
+  .customer-order-success,
+  .customer-order-cancelled {
+    padding: 1.25rem;
+
+    gap: 1rem;
+  }
+
+
+  .customer-order-success__icon,
+  .customer-order-cancelled__icon {
+    width: 46px;
+    height: 46px;
+  }
+
+}
+
+/* =========================
+   DELIVERY RATING
+========================= */
+
+.delivery-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 36px;
+  text-align: center;
+}
+
+.delivery-rating__header {
+  max-width: 460px;
+}
+
+.delivery-rating__eyebrow {
+  color: #f58200;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.delivery-rating__header h2 {
+  margin: 12px 0;
+  color: #201149;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.delivery-rating__header p {
+  color: #77718e;
+  line-height: 1.6;
+}
+
+.delivery-rating__stars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.delivery-rating__star {
+  width: 54px;
+  height: 54px;
+
+  border: 2px solid #e5dff5;
+  border-radius: 16px;
+
+  background: #f7f4ff;
+  color: #c7c0d7;
+
+  font-size: 2rem;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.delivery-rating__star--active {
+  background: #fff4d6;
+  border-color: #ffbe45;
+  color: #ffad00;
+}
+
+.delivery-rating__star:hover:not(:disabled) {
+  transform: translateY(-5px);
+}
+
+.delivery-rating__star:focus-visible {
+  outline: 3px solid #5946f5;
+  outline-offset: 3px;
+}
+
+.delivery-rating__star:disabled {
+  cursor: not-allowed;
+}
+
+.delivery-rating__score {
+  margin: 0;
+  color: #5946f5;
+  font-weight: 800;
+}
+
+.delivery-rating__field {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.delivery-rating__field label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #201149;
+  font-weight: 800;
+}
+
+.delivery-rating__field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+
+  border: 2px solid #e5dff5;
+  border-radius: 16px;
+
+  background: #faf9ff;
+  color: #201149;
+
+  font: inherit;
+  resize: vertical;
+}
+
+.delivery-rating__field textarea:focus {
+  outline: none;
+  border-color: #5946f5;
+}
+
+
+/* =========================
+   DELIVERY RATING SUCCESS
+========================= */
+
+.delivery-rating--success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+  min-height: 220px;
+  padding: 36px 24px;
+
+  text-align: center;
+}
+
+.delivery-rating--success h2 {
+  display: block;
+  margin: 0;
+
+  color: #201149;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.delivery-rating--success p {
+  display: block;
+  max-width: 420px;
+  margin: 0;
+
+  color: #77718e;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+.delivery-rating__success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  .delivery-rating {
+    padding: 24px 16px;
+  }
+
+  .delivery-rating__star {
+    width: 46px;
+    height: 46px;
+    font-size: 1.7rem;
+  }
+}
+
+
+/* =========================
+   CÓDIGO FINAL - DELIVERY
+========================= */
+
+.customer-order-delivery-code {
+  padding: 2rem;
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f6f2ff 100%
+  );
+
+  border: 2px solid #ddd2ff;
+  border-radius: 24px;
+
+  color: #1d1248;
+
+  box-shadow:
+    inset 0 2px 0 #ffffff,
+    0 6px 0 rgba(58, 35, 115, 0.2),
+    0 16px 30px rgba(0, 0, 0, 0.15);
+}
+
+.customer-order-delivery-code h2 {
+  color: #24105a;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.customer-order-delivery-code p {
+  color: #70658f;
+  font-weight: 600;
+}
+
+.customer-order-delivery-code strong {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1rem auto 1.5rem;
+  padding: 0.85rem 1.5rem;
+
+  background: #eee7ff;
+  border: 2px solid #d6c6ff;
+  border-radius: 16px;
+
+  color: #4f35d5;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}

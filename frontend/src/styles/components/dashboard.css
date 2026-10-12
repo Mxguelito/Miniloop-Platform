@@ -1,0 +1,610 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+
+/* =========================
+   HERO
+========================= */
+
+.dashboard-hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 330px;
+
+  margin-top: 1rem;
+  margin-bottom: 3.5rem;
+
+  padding: 3.5rem 4rem;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f7f5ff 55%,
+      #efedff 100%
+    );
+
+  box-shadow:
+    0 10px 30px rgba(32, 27, 64, 0.05);
+}
+
+.dashboard-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -90px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 71, 245, 0.06);
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.dashboard-hero__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 590px;
+}
+
+.dashboard-brand {
+  display: inline-flex;
+
+  margin-bottom: 1rem;
+
+  color: #5b47f5;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.dashboard-title {
+  margin: 0;
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 800;
+
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.dashboard-description {
+  max-width: 530px;
+
+  margin: 1.5rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.dashboard-hero__visual {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 280px;
+  height: 240px;
+
+  flex-shrink: 0;
+}
+
+.dashboard-hero__visual-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 36px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(68, 52, 160, 0.12);
+
+  font-size: 4.5rem;
+}
+
+.dashboard-hero__floating {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(68, 52, 160, 0.12);
+
+  font-size: 1.8rem;
+}
+
+.dashboard-hero__floating--shop {
+  top: 15px;
+  right: 10px;
+}
+
+.dashboard-hero__floating--package {
+  bottom: 15px;
+  left: 10px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.dashboard-section__header {
+  margin-bottom: 1.75rem;
+}
+
+.dashboard-section__eyebrow {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: #5b47f5;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dashboard-section__header h2 {
+  margin: 0;
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.dashboard-section__header p {
+  margin: 0.65rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 320px;
+
+  padding: 1.8rem;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dashboard-card:not(.dashboard-card--disabled):hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 35px rgba(32, 27, 64, 0.08);
+}
+
+.dashboard-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 1.7rem;
+}
+
+.dashboard-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 16px;
+
+  background: #efedff;
+
+  font-size: 1.7rem;
+}
+
+.dashboard-card__tag {
+  padding: 0.5rem 0.75rem;
+
+  border-radius: 999px;
+
+  background: #efedff;
+  color: #5b47f5;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.dashboard-card__tag--muted {
+  background: #f4f4f6;
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.dashboard-card__content {
+  flex: 1;
+}
+
+.dashboard-card h3 {
+  margin: 0 0 0.65rem;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.dashboard-card p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  line-height: 1.6;
+}
+
+.dashboard-card .ui-button {
+  margin-top: 1.75rem;
+}
+
+
+/* =========================
+   FEATURED
+========================= */
+
+.dashboard-card--featured {
+  border-color: rgba(91, 71, 245, 0.2);
+}
+
+
+/* =========================
+   DISABLED
+========================= */
+
+.dashboard-card--disabled {
+  opacity: 0.75;
+}
+
+
+/* =========================
+   GAME FOOTER
+========================= */
+
+.dashboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-top: 3rem;
+  padding: 2rem 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+/* Botones secundarios del menú */
+
+.dashboard-footer .ui-button {
+  min-width: 170px;
+  min-height: 58px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 1.4rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(80, 55, 160, 0.9),
+      rgba(43, 25, 105, 0.95)
+    );
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.18),
+    0 6px 0 rgba(5, 2, 25, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.22);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+/* Hover estilo botón de videojuego */
+
+.dashboard-footer .ui-button:hover {
+  transform: translateY(-4px);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(111, 76, 255, 0.95),
+      rgba(67, 40, 155, 0.98)
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.18),
+    0 9px 0 rgba(5, 2, 25, 0.35),
+    0 16px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* Sensación de botón presionado */
+
+.dashboard-footer .ui-button:active {
+  transform: translateY(2px);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.18),
+    0 2px 0 rgba(5, 2, 25, 0.4);
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.dashboard-logout {
+  padding: 0.75rem 1rem;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--color-text-secondary);
+
+  font: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.dashboard-logout:hover {
+  color: #d92d20;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .dashboard-hero {
+    padding: 2.5rem;
+  }
+
+  .dashboard-hero__visual {
+    width: 200px;
+  }
+
+  .dashboard-hero__visual-main {
+    width: 125px;
+    height: 125px;
+
+    font-size: 3.5rem;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .dashboard-hero {
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-height: auto;
+
+    padding: 2rem;
+  }
+
+  .dashboard-hero__visual {
+    width: 100%;
+    height: 170px;
+
+    margin-top: 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 2.7rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card {
+    min-height: 280px;
+  }
+
+  .dashboard-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+/* =========================
+   DASHBOARD GAME WORLD
+========================= */
+
+.dashboard-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(111, 76, 255, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #160b3d 0%,
+      #24105a 50%,
+      #10072d 100%
+    );
+}
+
+/* =========================
+   DASHBOARD GAME HEADER
+========================= */
+
+.dashboard-page .dashboard-brand {
+  color: #a98bff;
+}
+
+.dashboard-page .dashboard-title {
+  color: #ffffff;
+
+  text-shadow:
+    0 4px 18px rgba(111, 76, 255, 0.45);
+}
+
+.dashboard-page .dashboard-description {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dashboard-page .dashboard-section > h2 {
+  color: #ffffff;
+}
+
+/* =========================
+   ACCOUNT BUTTON ICONS
+========================= */
+
+.dashboard-account-button {
+  gap: 0.7rem;
+}
+
+.dashboard-account-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 26px;
+  height: 26px;
+
+  flex-shrink: 0;
+
+  transition: transform 0.2s ease;
+}
+
+.dashboard-account-button__icon svg {
+  width: 100%;
+  height: 100%;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* PERFIL */
+
+.dashboard-account-button:not(.dashboard-account-button--logout):hover
+.dashboard-account-button__icon {
+  transform: scale(1.18);
+}
+
+/* CERRAR SESIÓN */
+
+.dashboard-account-button--logout:hover
+.dashboard-account-button__icon {
+  transform: translateX(5px);
+}
